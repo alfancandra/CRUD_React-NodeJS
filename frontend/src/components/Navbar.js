@@ -9,14 +9,14 @@ const [isActive, setisActive] = React.useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
       <div className='navbar-brand'>
-        <a href='/' className='navbar-item'>
+        <Link to='/' className='navbar-item'>
           <img
             src='https://bulma.io/images/bulma-logo.png'
             alt='Logo'
             width='112'
             height='28'
           />
-        </a>
+        </Link>
 
         <a
           onClick={() => {

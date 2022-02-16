@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import 'bulma/css/bulma.min.css';
+import CurrencyFormat from 'react-currency-format';
+
  
 const ProductList = () => {
     const [products, setProduct] = useState([]);
@@ -37,7 +39,7 @@ const ProductList = () => {
                         <tr key={ product.id }>
                             <td>{ index + 1 }</td>
                             <td>{ product.title }</td>
-                            <td>{ product.price }</td>
+                            <td><CurrencyFormat value={product.price} thousandSeparator={'.'} displayType="text" decimalSeparator={','} prefix={'Rp. '} /></td>
                             <td>
                                 <Link to={`/edit/${product.id}`} className="button is-small is-info">Edit</Link>
                                 <button onClick={ () => deleteProduct(product.id) } className="button is-small is-danger">Delete</button>
