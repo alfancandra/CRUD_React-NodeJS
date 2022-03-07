@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios";
 import { useNavigate, useParams } from 'react-router-dom';
 import 'bulma/css/bulma.min.css';
+import CurrencyFormat from 'react-currency-format';
  
 const EditProduct = () => {
     const [title, setTitle] = useState('');
@@ -45,6 +46,7 @@ const EditProduct = () => {
  
                 <div className="field">
                     <label className="label">Price</label>
+                    
                     <input 
                         className="input"
                         type="text"
